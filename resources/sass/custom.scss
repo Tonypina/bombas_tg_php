@@ -1,0 +1,401 @@
+@import 'variables';
+@import 'extensions/all';
+
+/* Main custom scss */
+*{
+	box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, $green 14%,#009620 64%);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 0px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
+/* NAVBAR */
+
+header{
+    animation-duration: 1s;
+    animation-name: inicio;
+}
+
+#burgerMenu{
+    position: fixed;
+    right: 0;
+    width: 30vw;
+    z-index: 15;
+}
+
+.navbar{
+    box-shadow: 0px 2px 0px 0px rgba(59,59,59,0.75);
+    -webkit-box-shadow: 0px 2px 6px 1px rgba(59,59,59,0.75);
+    -moz-box-shadow: 0px 2px 6px 1px rgba(59,59,59,0.75);
+
+    padding: 0 3rem 0 3rem;
+}
+
+#nav_menu{
+    margin-left: 6vw;
+}
+
+.nav_menu_item{
+    margin-left: 3rem;
+}
+
+.is-mega li{
+    list-style: square;
+}
+
+#blogDropdown{
+    background-color: $green;
+}
+
+#blogDropdown a:hover{
+    background-color: #00a13e;
+}
+
+#blogDropdown p, #blogDropdown h1{
+    color: rgb(240, 239, 239);
+}
+
+/* MAIN */
+main{
+    margin-top: 5rem;
+}
+
+#index_main{
+    margin-top: 0;
+}
+
+.hero_us{
+    position: relative;
+    overflow: hidden;
+    animation-duration: 2.5s;
+    animation-name: inicio;
+}
+
+.hero-body{
+    z-index: 4;
+}
+
+.hero-body h1, .hero-body h2{
+    color: white;
+}
+
+.hero_us img{
+    position: absolute;
+    width: 100%;
+}
+
+.hero_us video{
+    position: absolute;
+    width: 100%;
+}
+
+.hero .fade{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 2;
+}
+
+.hero .carousel{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.slider-navigation-previous{
+    display: none;
+}
+
+.slider-pagination{
+    display: none;
+}
+
+.slider-navigation-next{
+    display: none;
+}
+
+#img_inicio{
+    align-items: center;
+    justify-content: center;
+    height: 40rem;
+}
+
+#img_inicio img{
+    width: 50rem;
+    z-index: 3;
+}
+
+.rombo {
+    position: relative;
+    display: flex;
+    width: 85px; 
+    height: 85px; 
+    border: 3px solid #555;
+    opacity: .5;
+    background: rgb(42,154,0);
+    background: linear-gradient(90deg, rgba(42,154,0,1) 0%, rgba(2,135,27,1) 39%, rgba(0,93,19,1) 83%);
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: .5s;
+    z-index: 11;
+}
+
+.rombo:hover{
+    background: rgb(0,93,19);
+    background: linear-gradient(90deg, rgba(0,93,19,1) 0%, rgba(1,173,12,1) 39%, rgba(0,93,20,1) 83%);
+    opacity: 1;
+}
+
+.rombo p{
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    font-size: large;
+    font-weight: bold;
+}
+
+.info img{
+    border-radius: 0.5rem;
+}
+
+#mision_vision_hero img{
+    transform: translateX(2rem);
+    height: 8rem;
+    margin-bottom: 2rem;
+}
+
+#client_list{
+    margin-left: 2rem;
+}
+
+#client_list li{
+    list-style: square;
+}
+
+#prov{
+    height: fit-content;
+    width: fit-content;
+}
+
+#prov img{
+    height: 16rem;
+    width: 40rem;
+}
+
+#services{
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#tab-content > div{
+    animation-duration: 2.5;
+    animation-name: inicio;
+}
+
+.ml-6{
+    margin-left: 3rem;
+}
+
+
+.mr-6{
+    margin-right: 3rem;
+}
+
+.lista{
+    list-style: square;
+}
+
+/* FOOTER */
+.contacto li{
+    list-style: none;
+    transform: translateX(-2vw);
+}
+
+.contacto a:hover{
+    color: $green;
+}
+
+.contacto i{
+    margin-right: 0.5vw;
+}
+
+.contacto a i{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.contacto a i:hover{
+    color: #00a13e;
+}
+
+#map{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+#map iframe{
+    position: absolute;
+    border-radius: 0.25rem;
+    width: 25rem;
+    height: 12.5rem;
+}
+
+#copyright p{
+    font-size: small;
+}
+
+#copyright{
+    height: 1rem;
+}
+
+/*ANIMACIONES*/
+
+.slidein_l{
+    animation-duration: 2.5s;
+    animation-name: slidein_l;
+}
+
+.slidein_r{
+    animation-duration: 2.5s;
+    animation-name: slidein_r;
+}
+
+.slidein_t{
+    animation-duration: 2.5s;
+    animation-name: slidein_t;
+}
+
+.slidein_b{
+    animation-duration: 2.5s;
+    animation-name: slidein_b;
+}
+
+@keyframes inicio{
+    
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes inicio_f{
+    from {
+        opacity: 1;
+    } to {
+        opacity: .6;
+    }
+}
+
+@keyframes slidein_l {
+    
+    from {
+      transform: translateX(100vw);
+    } to {
+      transform: translateX(0vw);
+    }
+}
+
+@keyframes slidein_r {
+    
+    from {
+        transform: translateX(-100vw);
+    } to {
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes slidein_b{
+    from {
+        transform: translateY(100vh);
+    } to {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes slidein_t{
+    from {
+        transform: translateY(-100vh);
+    } to {
+        transform: translateY(0vh);
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .hero_us img{
+        height: max-content;
+        width: auto;
+    }
+
+    .info img{
+        width: 90vw;
+    }
+
+    .container{
+        overflow: hidden;
+    }
+
+    main .column{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #mision_vision_hero .column, .objetivo .column{
+        margin: 0.5rem;
+    }
+
+    #prov img{
+        width: 90vw;
+        height: auto;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+/*Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+        
+    #burgerMenu{
+        display: none;
+    }
+}
+
+/*Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+    
+    #burgerMenu{
+        display: none;
+    }
+}

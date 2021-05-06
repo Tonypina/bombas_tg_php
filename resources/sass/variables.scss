@@ -1,0 +1,29 @@
+
+// Import font
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+// Color Variables
+$blue: #3b5998;
+$green: #016c2a;
+$dark: rgb(65, 64, 64);
+$primary: rgb(9, 100, 153);
+$light: rgb(161, 159, 159);
+
+/* NAVBAR */
+$navbar-background-color: $dark;
+$navbar-height: 5rem;
+$navbar-item-img-max-height: 4rem;
+$navbar-item-hover-background-color: #016c433a;
+$navbar-dropdown-arrow: $green;
+$navbar-burger-color: $green;
+
+/* TABS */
+$tabs-link-active-color: $green; 
+//$tabs-border-bottom-color: $green;
+//$tabs-boxed-link-active-border-color: $green;
+
+/* FOOTER */
+$footer-padding:  2rem 5rem 2rem;
+$footer-background-color: $dark;
+
+// Font Variables
+$family-sans-serif: 'Inter', sans-serif;
