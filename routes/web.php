@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CatalogoController;
+use App\Http\Controllers\ContactoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServiciosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::redirect('/Inicio', '/', 301);
+
+Route::get('/Nosotros', function () {
+    return view('nosotros');
+});
+
+Route::get('/Servicios', [ServiciosController::class, 'index']);
+
+Route::get('/Servicios/{type}/{service}', [ServiciosController::class, 'show']);
+
+Route::get('/Catalogo', [CatalogoController::class, 'index']);
+
+Route::get('/Catalogo/{type}/{product}', [CatalogoController::class, 'show']);
+
+Route::get('/Contacto', [ContactoController::class, 'index'])->name('contacto.index');
+
+Route::post('/Contacto', [ContactoController::class, 'store'])->name('contacto.store');
