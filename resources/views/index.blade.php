@@ -11,12 +11,13 @@
 				<section class="hero is-fullheight hero_us">			
 					<div class="carousel">
 						<div id="img_inicio" class="item-1 hero-body">
-							<img src="{{ URL::asset('/img/Logo_alta.png') }}">
+							<img id="img_mobile" src="{{ URL::asset('/img/Icono_alta.png') }}">
+							<img id="img_desktop" src="{{ URL::asset('/img/Logo_alta.png') }}">
 						</div>
-						<div id="img_inicio" class="item-2 hero-body">
+						<div class="item-2 hero-body">
 							<h1 class="title has-text-centered has-text-white is-uppercase is-size-2">Integración de servicios de alto nivel</h1>
 						</div>
-						<div id="img_inicio" class="item-3 hero-body">
+						<div class="item-3 hero-body">
 							<h1 class="title has-text-centered has-text-white is-size-2">DINAMISMO E INTEGRACIÓN EN SISTEMAS DE BOMBEO!</h1>
 						</div>
 					</div>

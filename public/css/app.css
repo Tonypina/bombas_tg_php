@@ -77,7 +77,8 @@ header {
   background-color: #00a13e;
 }
 
-#blogDropdown p, #blogDropdown h1 {
+#blogDropdown p,
+#blogDropdown h1 {
   color: #f0efef;
 }
 
@@ -103,7 +104,8 @@ main {
   z-index: 4;
 }
 
-.hero-body h1, .hero-body h2 {
+.hero-body h1,
+.hero-body h2 {
   color: white;
 }
 
@@ -127,7 +129,11 @@ main {
 
 .hero .carousel {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100%;
   z-index: 10;
 }
 
@@ -143,14 +149,27 @@ main {
   display: none;
 }
 
-#img_inicio {
-  align-items: center;
-  justify-content: center;
-  height: 40rem;
+.slider {
+  transform: translateY(-10vh);
 }
 
-#img_inicio img {
-  width: 50rem;
+#img_inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: translateY(10vh);
+}
+
+#img_inicio #img_desktop {
+  display: none;
+}
+
+#img_inicio #img_mobile {
+  height: 60vw;
+  width: 60vw;
   z-index: 3;
 }
 
@@ -435,7 +454,8 @@ main {
     margin-right: 2rem;
   }
 
-  #mision_vision_hero .column, .objetivo .column {
+  #mision_vision_hero .column,
+.objetivo .column {
     margin: 0.5rem;
   }
 
@@ -447,12 +467,44 @@ main {
 /* Medium devices (landscape tablets, 768px and up) */
 /*Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
+  #img_inicio #img_mobile {
+    display: none;
+  }
+
+  #img_inicio #img_desktop {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    z-index: 3;
+  }
+
   #burgerMenu {
     display: none;
   }
 }
 /*Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1201px) {
+  .slider {
+    height: 100%;
+  }
+
+  .slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #img_inicio #img_mobile {
+    display: none;
+  }
+
+  #img_inicio #img_desktop {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    z-index: 3;
+  }
+
   #burgerMenu {
     display: none;
   }
